@@ -6,7 +6,7 @@
 /*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 13:17:15 by ozerbib-          #+#    #+#             */
-/*   Updated: 2023/01/30 16:03:23 by ozerbib-         ###   ########.fr       */
+/*   Updated: 2023/02/09 21:13:09 by ozerbib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*get_next_line(int fd)
 	static char		unloader[BUFFER_SIZE + 1];
 	char			*loader;
 	int				i;
-	
+
 	i = 0;
 	if (BUFFER_SIZE < 1 || read(fd, 0, 0) < 0)
 	{

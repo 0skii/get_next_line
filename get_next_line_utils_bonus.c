@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ozerbib- <ozerbib-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/09 21:07:31 by ozerbib-          #+#    #+#             */
+/*   Updated: 2023/02/09 21:07:31 by ozerbib-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
 
 size_t	ft_len(char *str)
@@ -6,26 +18,26 @@ size_t	ft_len(char *str)
 
 	i = 0;
 	if (!str)
-		return(0);
+		return (0);
 	while (str[i] && str[i] != '\n')
 		i++;
 	if (str[i] == '\n')
-		i++;	
+		i++;
 	return (i);
 }
 
 char	*ft_join(char *s1, char *s2)
 {
-	char 	*x;
+	char		*x;
 	size_t		i;
 	size_t		j;
-	
+
 	i = 0;
 	j = 0;
 	x = (char *)malloc(ft_len(s1) + ft_len(s2) + 1);
 	if (!x)
-		return(NULL);
-	while(s1 && s1[i])
+		return (NULL);
+	while (s1 && s1[i])
 	{
 		x[i] = s1[i];
 		i++;
@@ -35,7 +47,7 @@ char	*ft_join(char *s1, char *s2)
 	{
 		x[i++] = s2[j];
 		if (s2[j++] == '\n')
-			break;
+			break ;
 	}
 	x[i] = '\0';
 	return (x);
@@ -43,10 +55,10 @@ char	*ft_join(char *s1, char *s2)
 
 char	ft_cleaner(char	*str)
 {
-	int		nline;
+	int			nline;
 	size_t		i;
 	size_t		j;
-	
+
 	i = 0;
 	j = 0;
 	nline = 0;
